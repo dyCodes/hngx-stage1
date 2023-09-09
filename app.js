@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const PORT = process.env.PORT || 8000;
 
 app.get("/", (req, res) => {
 	res.send("HNGx Stage one task [dyCodes]");
@@ -26,6 +27,6 @@ app.get("/api", (req, res) => {
 	res.json(profile);
 });
 
-app.listen(8000, () => {
-	console.log(` listening on port 8000`);
+app.listen(PORT, () => {
+	console.log(`server started on port ${PORT}`);
 });
